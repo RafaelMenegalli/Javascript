@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário com JavaScript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        main{
+            width: 50vw;
+            margin: 0 auto;
+            background-color: rgb(144, 144, 209);
+            text-align: center;
+            padding: 30px;
+            border-radius: 0 0 10px 10px;
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        label{
+            padding: 5px;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+
+        input{
+            height: 1.4em;
+            border-radius: 5px;
+            border: 0;
+            padding: 5px;
+        }
+
+        h1{
+            padding: 0 0 20px 0;
+        }
+
+        .btn_enviar{
+            margin-top: 20px;
+            height: 30px;
+            width: 45%;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn_enviar:hover{
+            color: white;
+            background-color: rgb(144, 144, 209);
+            border: 2px solid black;
+            height: 34px;
+            width: 47%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Formulario (Preencha)</h1>
+        <form action="">
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome">
+            <label for="idade">Idade: </label>
+            <input type="text" name="idade">
+            <label for="email">Email: </label>
+            <input type="email" name="email">
+
+            <input type="submit" value="Enviar" class="btn_enviar">
+        </form>
+    </main>
+
+    <script>
+        var senha = window.prompt('Acerte a senha para Acessar')
+    </script>
+</body>
+</html>
