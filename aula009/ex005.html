@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos em DOM</title>
+</head>
+<body>
+    <h1>Aprendendo sobre DOM</h1>
+    <p>A resposta irá aparecer aqui</p>
+    <p>E a final o que é o <strong>DOM?</strong></p>
+    <div id="msg">
+        Clique em Mim
+    </div>
+
+    <script>
+        /*
+        var body = window.document.body
+        var titulo = document.getElementsByTagName('h1')[0]
+        document.write('Seu Titulo Principal é: ' + titulo.innerText)
+        titulo.style.color = 'green'
+        body.style.background = 'white'
+        var p1 = document.getElementsByTagName('p') 
+        document.write(p1.innerHTML)
+        var div = document.getElementById('div')
+        div.innerText = 'Deu certo?'
+        div.style.color = 'blue'
+        */
+
+        var msg = document.querySelector('div#msg')
+        msg.style.background = 'green'
+        msg.style.padding = '10px'
+        msg.style.color = 'white'
+    </script>
+</body>
+</html>
