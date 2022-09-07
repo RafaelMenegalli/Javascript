@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #evento{
+            background-color: lightgreen;
+            width: 400px;
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            font-size: 2.5em;
+            border-radius: 10px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.575);
+            margin: 0 auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="evento">
+        Clique em Mim!!
+    </div>
+
+    <script>
+        var txt = document.getElementById('evento')
+        txt.addEventListener('click', clicar)
+        txt.addEventListener('mouseenter', entrar)
+        txt.addEventListener('mouseleave', sair)
+        function clicar(){
+            txt.innerText = 'Clicou!'
+            txt.style.background = 'lightblue'
+        }
+        function entrar(){
+            txt.innerText = 'Entrou!'
+        }
+        function sair(){
+            txt.innerText = 'Saiu!'
+            txt.style.background = 'lightgreen'
+        }
+    </script>
+</body>
+</html>
