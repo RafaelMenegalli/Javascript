@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos Basicos</title>
+</head>
+
+<body>
+    <h1>Calculos Básicos com JavaScript</h1>
+    <input type="text" id="valor01" placeholder="Digite o primeiro numero"> +
+    <input type="text" id="valor02" placeholder="Digite o segundo numero">
+    <button onclick="somar()">Enviar</button>
+    <p id="resposta">resposta:</p>
+
+    <script>
+        // interessante fazer o javascript separado do html em projetos grandes (curiosidade).
+        function somar() {
+            var valor01 = document.getElementById("valor01")
+            var valor02 = document.getElementById("valor02")
+            var num01 = parseInt(valor01.value)
+            var num02 = parseInt(valor02.value)
+            var resultado = num01 + num02
+            document.getElementById('resposta').innerHTML = "Resultado: " + resultado
+        }
+    </script>
+</body>
+
+</html>

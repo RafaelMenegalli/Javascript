@@ -10,19 +10,20 @@
     <h1>Calculo com JavaScript</h1>
     <input type="number" name="txtn1" id="txtn1"> +
     <input type="number" name="txtn2" id="txtn2">
-    <input type="button" value="Somar" onclick="clicar()">
+    <Button onclick="somar()">Somar</Button>
     <div id="resposta">Resposta</div>
 
     <script>
+        function somar(){
         var boxn1 = document.getElementById('txtn1')
         var boxn2 = document.getElementById('txtn2')
         var resposta = document.getElementById('resposta')
         var n1 = Number(boxn1.value)
         var n2 = Number(boxn2.value)
         var soma = n1 + n2
-        function clicar(){
-            resposta.innerHTML = soma
+        resposta.innerText = + soma
         }
+        
     </script>
 </body>
 </html>

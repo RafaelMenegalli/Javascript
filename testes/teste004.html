@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos Basicos Com JavaScript</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(189, 189, 189);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main{
+            background-color: white;
+            margin: 0 auto;
+            width: 50vw;
+            text-align: center;
+            padding: 8px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.534);
+        }
+
+        main h1{
+            background-color: lightgray;
+            border-radius: 5px;
+            margin: 0 0 20px 0;
+        }
+
+        label{
+            font-size: 1.5em;
+        }
+
+        input{
+            width: 30%;
+        }
+
+        .divisao{
+            margin: 20px 0;
+        }
+
+        p#resultado{
+            font-weight: bold;
+            font-size: 1.4em;
+        }
+
+        button{
+            width: 20%;
+            padding: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Calculos Basicos Com JavaScript</h1>
+        <div class="divisao">
+            <label for="valor01">Digite um Numero:</label>
+            <input type="number" name="valor01" id="valor01">
+        </div>
+        <div class="divisao">
+            <label for="valor02">Digite um Numero:</label>
+            <input type="number" name="valor02" id="valor02">
+        </div>
+        <div class="divisao">
+            <p id="resultado">Resultado: </p>
+        </div>
+        <div class="divisao">
+            <p id="extra"></p>
+        </div>
+        <button onclick="somar()">Somar</button>
+    </main>
+
+    <script>
+        function somar(){
+        var valor01 = document.getElementById('valor01')
+        var valor02 = document.getElementById('valor02')
+        var resultado = document.getElementById('resultado')
+        var extra = document.getElementById('extra')
+        var n1 = Number(valor01.value)
+        var n2 = Number(valor02.value)
+        var soma = n1 + n2
+        resultado.innerText = 'Resultado: ' + soma
+        extra.innerText = `A soma entre os numeros ${n1} e ${n2} é: ${soma}`
+        }
+    </script>
+</body>
+</html>
