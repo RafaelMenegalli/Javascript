@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificação de Idade</title>
+</head>
+<body>
+    <h1>Verificação de Idade</h1>
+    <label for="nome">Digite o Seu Nome: </label>
+    <input type="text" name="nome" id="nome"> <br> <br> 
+    <label for="idade">Digite a Sua Idade: </label>
+    <input type="number" name="idade" id="idade"> <br> <br>
+    <button id="btn" onclick="verificar()">Verificar</button>
+    <p id="res">Resultado: </p>
+
+    <script>
+        function verificar(){
+            var txtnome = document.getElementById('nome')
+            var nome = txtnome.value
+            var txtidade = document.getElementById('idade')
+            var resultado = document.getElementById('res')
+            var idade = Number(txtidade.value)
+            if (idade >= 18){
+                resultado.innerHTML = `${nome} tem ${idade} Anos e ja é <strong>maior</strong> de idade.`
+            } else{
+                resultado.innerHTML = `${nome} tem ${idade} Anos e ainda é <strong>menor</strong> de idade.`
+            }
+        }
+    </script>
+</body>
+</html>
