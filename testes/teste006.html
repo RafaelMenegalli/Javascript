@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Calculo Mais Avançado</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <h1>Calculos (+) (-) (X) (/)</h1>
+    <div class="soma">
+        <h3>Soma</h3>
+        <input type="number" name="valor01" id="valor01" placeholder="Digite um Numero:"> +
+        <input type="number" name="valor02" id="valor02" placeholder="Digite um Numero:">
+        <button id="somar" onclick="somar()">Somar</button>
+        <p id="resultado-soma">Resultado: </p>
+    </div>
+    <div class="menos">
+        <h2>Subtração</h2>
+        <input type="number" name="valor03" id="valor03" placeholder="Digite um Numero:"> -
+        <input type="number" name="valor04" id="valor04" placeholder="Digite um Numero:">
+        <button id="menos" onclick="subtrair()">Subtrair</button>
+        <p id="resultado-menos">Resultado: </p>
+    </div>
+
+    <script>
+        function somar(){
+            var valor01 = document.getElementById('valor01')
+            var valor02 = document.getElementById('valor02')
+            var ressoma = document.getElementById('resultado-soma')
+            var n1 = Number(valor01.value)
+            var n2 = Number(valor02.value)
+            var soma = n1 + n2
+            ressoma.innerText = 'Resultado: ' + soma
+        }
+
+        function subtrair(){
+            var valor03 = document.getElementById('valor03')
+            var valor04 = document.getElementById('valor04')
+            var resmenos = document.getElementById('resultado-menos')
+            var n3 = Number(valor03.value)
+            var n4 = Number(valor04.value)
+            var subtrair = n3 - n4
+            resmenos.innerText = 'Resultado: ' + subtrair
+        }
+
+    </script>
+</body>
+</html>
