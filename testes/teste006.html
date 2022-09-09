@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Calculo Mais Avançado</title>
     <style>
-        
+        button{
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <h1>Calculos (+) (-) (X) (/)</h1>
     <div class="soma">
-        <h3>Soma</h3>
+        <h2>Soma</h2>
         <input type="number" name="valor01" id="valor01" placeholder="Digite um Numero:"> +
         <input type="number" name="valor02" id="valor02" placeholder="Digite um Numero:">
         <button id="somar" onclick="somar()">Somar</button>
@@ -24,6 +26,14 @@
         <input type="number" name="valor04" id="valor04" placeholder="Digite um Numero:">
         <button id="menos" onclick="subtrair()">Subtrair</button>
         <p id="resultado-menos">Resultado: </p>
+    </div>
+
+    <div class="vezes">
+        <h2>Multiplicação</h2>
+        <input type="number" name="mult1" id="mult1" placeholder="Digite um Numero"> X
+        <input type="number" name="mult2" id="mult2" placeholder="Digite um Numero">
+        <button id="multiplicar" onclick="multiplicar()">Multiplicar</button>
+        <p id="resultado-multiplicacao">Resposta:</p>
     </div>
 
     <script>
@@ -45,6 +55,16 @@
             var n4 = Number(valor04.value)
             var subtrair = n3 - n4
             resmenos.innerText = 'Resultado: ' + subtrair
+        }
+
+        function multiplicar(){
+            var valor05 = document.getElementById('mult1')
+            var valor06 = document.getElementById('mult2')
+            var n5 = Number(valor05.value)
+            var n6 = Number(valor06.value)
+            var resmultiplicacao = document.getElementById('resultado-multiplicacao')
+            var multiplicacao = n5 * n6
+            resmultiplicacao.innerText = 'Resultado: ' + multiplicacao 
         }
 
     </script>
