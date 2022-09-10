@@ -4,31 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nacionalidade</title>
+    <title>Teste Nacionalidade</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form{
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        form h2{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        <form action="">
-            <h2>Nacionalidade</h2>
-            <label for="lugar">Pais de Origem:</label>
-            <input type="text" name="lugar" id="lugar" placeholder="Digite um País:">
-            <button id="btn">Verificar</button>
-            <p id="res">Resultado: </p>
-        </form>
-    </main>
+    <form action="">
+        <h2>Teste Nacionalidade</h2>
+        <label for="pais">Digite seu País de Origem</label>
+        <input type="text" name="pais" id="pais" placeholder="Pais">
+        <p id="res">Nacionalidade:</p>
+        <input type="button" value="Validar" onclick="avaliar()">
+        <button type="reset">Resetar</button>
+    </form>
 
     <script>
-        function verificar(){
-            var btn = document.getElementById('btn')
-            btn.addEventListener('click', verificar())
-        
-            var txtpais = document.getElementById('lugar')
-            var pais = txtpais.value
-            var txtres = document.getElementById('res')
-            if (pais == 'Brasil'){
-                res.innertxt = 'Você é Brasileiro'
+        function avaliar(){
+            var pais = document.getElementById('pais').value
+            var resultado = document.getElementById('res')
+
+            if(pais == 'Brasil' || pais == 'BRASIL' || pais == 'brasil'){
+                resultado.innerHTML = 'Nacionalidade: Brasileiro'
             } else{
-                res.innertxt = 'Você é Estrangeiro'
+                resultado.innerHTML = 'Nacionalidade: Estrangeiro'
             }
         }
     </script>
