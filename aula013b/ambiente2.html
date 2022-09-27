@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            height: 100vh;
+            width: 100vw;
+            background-color: lightblue;
+            position: relative;
+        }
+
+        main{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            width: 30vw;
+            height: 30vh;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 5em;
+        }
+
+        button{
+            padding: 8px;
+            width: 30%;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="numero">0</div>
+        <button id="btn" onclick="somarUm()">+1</button>
+    </main>
+
+    <script>
+        function somarUm(){
+            var contador = 0
+            var num = document.getElementById('numero')
+            while(contador <= 100){
+                num.innerHTML = contador + 1
+
+            }
+        }
+
+    </script>
+</body>
+</html>
