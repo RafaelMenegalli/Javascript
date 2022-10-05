@@ -21,8 +21,21 @@ function inLista(n, l){
 
 function Adicionar(){
     if(isNumero(num.value) && !inLista(num.value, valores)){
-        alert('Tudo Ok!')
+        valores.push(Number(num.value))
+        let item = document.createElement('option')
+        item.text = `O valor ${num.value} foi adicionado.`
+        lista.appendChild(item)
+        res.innerHTML = ''
     } else{
         alert('Valor invalido ou ja encotrado na Lista')
     }
+
+    num.value = ''
+    num.focus()
+}
+
+function Finalizar(){
+    let total = valores.length
+
+    res.innerText += `O total de numeros cadastrados foi ${total}`
 }
