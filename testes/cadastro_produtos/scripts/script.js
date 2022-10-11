@@ -1,5 +1,6 @@
 var produto = document.getElementById('iprodutos')
 var tabela = document.getElementById('itab')
+var res = document.getElementById('ires')
 
 function Cadastrar(){
     if(produto.value.length == 0 ){
